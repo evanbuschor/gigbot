@@ -24,8 +24,9 @@ client.on("message", (message) => {
 		message.channel.send(
 			`	All Commands Start with !
 
-	!help	Display help message
-	!hi		Check liveness of bot
+	!help		*Display help message*
+	!hi			*Check liveness of bot*
+	!avatar		*Get the URL for your current avatar*
 
 `
 		);
