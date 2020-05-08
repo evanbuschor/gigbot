@@ -30,6 +30,10 @@ client.on("message", (message) => {
 `
 		);
 	}
+
+	if (message.content.startsWith(`${prefix}avatar`)) {
+		message.reply(message.author.displayAvatarURL());
+	}
 });
 
 client.login(process.env.DISCORD_TOKEN);
