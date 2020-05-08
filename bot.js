@@ -5,11 +5,9 @@ const { prefix } = require("./config.json");
 const client = new Discord.Client();
 
 client.once("ready", () => {
-	console.log(
-		`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`
-	);
+	console.log(`Bot has started`);
 
-	client.user.setActivity(`Exploring the Galaxi`);
+	client.user.setActivity(`The Galaxi`);
 });
 
 client.on("message", (message) => {
@@ -26,9 +24,6 @@ client.on("message", (message) => {
 		message.channel.send(
 			`My master Has not made a help yet... sory @${message.member.user.username}`
 		);
-	}
-	if (message.content.startsWith(`${prefix}test`)) {
-		message.channel.send(`!test`);
 	}
 });
 
