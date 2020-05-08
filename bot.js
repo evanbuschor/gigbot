@@ -22,7 +22,8 @@ client.on("message", (message) => {
 
 	if (message.content.startsWith(`${prefix}help`)) {
 		message.channel.send(
-			`	All Commands Start with !
+			`	V. ${process.env.npm_package_version}
+			All Commands Start with !
 
 	!help		*Display help message*
 	!hi			*Check liveness of bot*
