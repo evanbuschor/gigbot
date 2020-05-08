@@ -22,7 +22,8 @@ client.on("message", (message) => {
 
 	if (message.content.startsWith(`${prefix}help`)) {
 		message.channel.send(
-			`My master Has not made a help yet... sory @${message.member.user.username}`
+			`My master Has not made a help yet... sory @${message.member.user.username}
+			I'm currently in development and need some time. Commands start with '${prefix}.`
 		);
 	}
 });
