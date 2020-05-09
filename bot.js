@@ -4,6 +4,33 @@ const { prefix } = require("./config.json");
 
 const client = new Discord.Client();
 
+var lennyArray = [
+	'( ͡° ͜ʖ ͡°)',
+	'( ͠° ͟ʖ ͡°)',
+	'( ͡~ ͜ʖ ͡°)',
+	'( ͡ʘ ͜ʖ ͡ʘ)',
+	'( ͡o ͜ʖ ͡o)',
+	'(° ͜ʖ °)',
+	'( ‾ʖ̫‾)',
+	'( ಠ ͜ʖಠ)',
+	'( ͡° ʖ̯ ͡°)',
+	'( ͡ಥ ͜ʖ ͡ಥ)',
+	'༼  ͡° ͜ʖ ͡° ༽',
+	'(▀̿Ĺ̯▀̿ ̿)',
+	'( ✧≖ ͜ʖ≖)',
+	'(ง ͠° ͟ل͜ ͡°)ง',
+	'(͡ ͡° ͜ つ ͡͡°) ',
+	'[̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅]',
+	'(✿❦ ͜ʖ ❦)',
+	'ᕦ( ͡° ͜ʖ ͡°)ᕤ',
+	'( ͡° ͜ʖ ͡°)╭∩╮',
+	'¯\_( ͡° ͜ʖ ͡°)_/¯',
+	'(╯ ͠° ͟ʖ ͡°)╯┻━┻',
+	'( ͡°( ͡° ͜ʖ( ͡° ͜ʖ ͡°)ʖ ͡°) ͡°)',
+	'¯\_(ツ)_/¯',
+	'ಠ_ಠ'
+]
+
 client.once("ready", () => {
 	console.log(`Bot has started`);
 
@@ -38,7 +65,7 @@ client.on("message", (message) => {
 	}
 
 	if (message.content.startsWith(`${prefix}darthplagueis`)) {
-		message.channel.sent(` Did you ever hear the tragedy of Darth Plagueis The Wise? 
+		message.channel.send(` Did you ever hear the tragedy of Darth Plagueis The Wise? 
 		I thought not. It’s not a story the Jedi would tell you. It’s a Sith legend. 
 		Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life… 
 		He had such a knowledge of the dark side that he could even keep the ones he cared about from dying. 
@@ -46,6 +73,11 @@ client.on("message", (message) => {
 		the only thing he was afraid of was losing his power, which eventually, of course, he did. 
 		Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep. 
 		Ironic. He could save others from death, but not himself`)
+	}
+
+	if (message.content.startsWith(`${prefix}lennyface`)) {
+		let lennyIndex = Math.random() * lennyArray.length;
+		message.channel.send(lennyArray[lennyIndex]);
 	}
 
 });
