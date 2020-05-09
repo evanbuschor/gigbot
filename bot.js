@@ -7,7 +7,7 @@ const client = new Discord.Client();
 client.once("ready", () => {
 	console.log(`Bot has started`);
 
-	client.user.setActivity(`The Galaxi`);
+	client.user.setStatus(`Exploring IC 2118`);
 });
 
 client.on("message", (message) => {
