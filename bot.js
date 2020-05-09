@@ -1,35 +1,9 @@
 require("dotenv").config();
+const messageUtil = require("./Utilities/messageUtil");
 const Discord = require("discord.js");
 const { prefix } = require("./config.json");
 
 const client = new Discord.Client();
-
-var lennyArray = [
-	"( ͡° ͜ʖ ͡°)",
-	"( ͠° ͟ʖ ͡°)",
-	"( ͡~ ͜ʖ ͡°)",
-	"( ͡ʘ ͜ʖ ͡ʘ)",
-	"( ͡o ͜ʖ ͡o)",
-	"(° ͜ʖ °)",
-	"( ‾ʖ̫‾)",
-	"( ಠ ͜ʖಠ)",
-	"( ͡° ʖ̯ ͡°)",
-	"( ͡ಥ ͜ʖ ͡ಥ)",
-	"༼  ͡° ͜ʖ ͡° ༽",
-	"(▀̿Ĺ̯▀̿ ̿)",
-	"( ✧≖ ͜ʖ≖)",
-	"(ง ͠° ͟ل͜ ͡°)ง",
-	"(͡ ͡° ͜ つ ͡͡°) ",
-	"[̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅]",
-	"(✿❦ ͜ʖ ❦)",
-	"ᕦ( ͡° ͜ʖ ͡°)ᕤ",
-	"( ͡° ͜ʖ ͡°)╭∩╮",
-	"¯_( ͡° ͜ʖ ͡°)_/¯",
-	"(╯ ͠° ͟ʖ ͡°)╯┻━┻",
-	"( ͡°( ͡° ͜ʖ( ͡° ͜ʖ ͡°)ʖ ͡°) ͡°)",
-	"¯_(ツ)_/¯",
-	"ಠ_ಠ",
-];
 
 client.once("ready", () => {
 	console.log(`Bot has started`);
@@ -78,8 +52,7 @@ client.on("message", (message) => {
 	}
 
 	if (message.content.startsWith(`${prefix}lennyface`)) {
-		let lennyIndex = Math.random() * lennyArray.length;
-		message.channel.send(lennyArray[lennyIndex]);
+		message.channel.send(messageUtil.randomLennyFace());
 	}
 });
 
